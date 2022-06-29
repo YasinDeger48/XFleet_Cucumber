@@ -4,6 +4,13 @@
 <img src="https://github.com/YasinDeger48/XFleet_Cucumber/blob/master/cucumber.png" width="80" height="80">
 
 
+## Clone the repository and make the desired code changes:
+
+```sh
+git clone https://github.com/YasinDeger48/XFleet_Cucumber.git
+```
+
+
 create Java packages:
 > runners,
 > pages(POM),
