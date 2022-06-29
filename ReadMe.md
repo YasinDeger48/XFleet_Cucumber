@@ -45,3 +45,9 @@ Create Utility packages:
 - cross browser testing
 
 create resources directory same level with java directory the purpose is to hold our scenarios for the project
+
+Clone the repository and make the desired code changes:
+
+```sh
+git clone https://github.com/YasinDeger48/XFleet_Cucumber.git
+```
