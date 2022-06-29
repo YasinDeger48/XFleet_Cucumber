@@ -46,7 +46,7 @@ Create Utility packages:
 
 create resources directory same level with java directory the purpose is to hold our scenarios for the project
 
-Clone the repository and make the desired code changes:
+##Clone the repository and make the desired code changes:
 
 ```sh
 git clone https://github.com/YasinDeger48/XFleet_Cucumber.git
