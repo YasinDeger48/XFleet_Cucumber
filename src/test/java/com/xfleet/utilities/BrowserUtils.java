@@ -1,2 +1,4 @@
-package com.xfleet.utilities;public class BrowserUtils {
+package com.xfleet.utilities;
+
+public class BrowserUtils {
 }
