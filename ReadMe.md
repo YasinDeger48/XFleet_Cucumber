@@ -1,7 +1,7 @@
 # Cucumber Framework for XFleet Application
 ## _Framework Format_
 
-<img src="https://github.com/YasinDeger48/Adidas_Cucumber_Framework/blob/master/cucumber.png" width="100" height="100">
+<img src="https://github.com/YasinDeger48/XFleet_Cucumber/blob/master/cucumber.png" width="80" height="80">
 
 
 create Java packages:
