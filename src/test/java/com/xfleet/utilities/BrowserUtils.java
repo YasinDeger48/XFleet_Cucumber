@@ -11,13 +11,14 @@ public class BrowserUtils {
 
     /**
      * Static sleep method accept second and wait during time
+     *
      * @param seconds
      */
 
-    public static void sleep(int seconds){
+    public static void sleep(int seconds) {
 
         try {
-            Thread.sleep(seconds*1000);
+            Thread.sleep(seconds * 1000);
         } catch (InterruptedException e) {
             System.out.println("static sleep issue");
         }
@@ -26,19 +27,19 @@ public class BrowserUtils {
 
     /**
      * These methods using for the get usernames
+     *
      * @return
      */
 
 
-    public static List<String> truckDriversUserName(){
+    public static List<String> truckDriversUserName() {
 
         String path = "credentials.xlsx";
 
         List<String> truckDrivers = new ArrayList<>();
 
 
-
-        try{
+        try {
             FileInputStream file = new FileInputStream(path);
 
             XSSFWorkbook workbook = new XSSFWorkbook(file);
@@ -53,8 +54,7 @@ public class BrowserUtils {
             }
 
 
-
-        } catch (Exception e){
+        } catch (Exception e) {
 
             e.printStackTrace();
         }
@@ -62,7 +62,7 @@ public class BrowserUtils {
         return truckDrivers;
     }
 
-    public static List<String> storeManagersUserName(){
+    public static List<String> storeManagersUserName() {
 
         String path = "credentials.xlsx";
 
@@ -70,8 +70,7 @@ public class BrowserUtils {
         List<String> storeManagers = new ArrayList<>();
 
 
-
-        try{
+        try {
             FileInputStream file = new FileInputStream(path);
 
             XSSFWorkbook workbook = new XSSFWorkbook(file);
@@ -86,14 +85,14 @@ public class BrowserUtils {
             }
 
 
-        } catch (Exception e){
+        } catch (Exception e) {
 
             e.printStackTrace();
         }
         return storeManagers;
     }
 
-    public static List<String> salesManagersUserName(){
+    public static List<String> salesManagersUserName() {
 
         String path = "credentials.xlsx";
 
@@ -101,7 +100,7 @@ public class BrowserUtils {
         List<String> salesManagers = new ArrayList<>();
 
 
-        try{
+        try {
             FileInputStream file = new FileInputStream(path);
 
             XSSFWorkbook workbook = new XSSFWorkbook(file);
@@ -111,15 +110,13 @@ public class BrowserUtils {
             int rowNumber = sheet.getPhysicalNumberOfRows();
 
 
-
             for (int i = 1; i < rowNumber; i++) {
 
                 salesManagers.add(sheet.getRow(i).getCell(2).toString());
             }
 
 
-
-        } catch (Exception e){
+        } catch (Exception e) {
 
             e.printStackTrace();
         }
@@ -127,6 +124,25 @@ public class BrowserUtils {
         return salesManagers;
     }
 
+    public static String password() {
+        String path = "credentials.xlsx";
+        String password = "";
 
+
+        try {
+            FileInputStream file = new FileInputStream(path);
+
+            XSSFWorkbook workbook = new XSSFWorkbook(file);
+
+            XSSFSheet sheet = workbook.getSheet("data");
+
+            password = sheet.getRow(1).getCell(3).toString();
+
+        } catch (Exception e) {
+
+        }
+        return password;
+
+    }
 
 }
