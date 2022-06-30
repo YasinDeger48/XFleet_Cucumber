@@ -1,7 +1,14 @@
 # Cucumber Framework for XFleet Application
 ## _Framework Format_
 
-<img src="https://github.com/YasinDeger48/Adidas_Cucumber_Framework/blob/master/cucumber.png" width="100" height="100">
+<img src="https://github.com/YasinDeger48/XFleet_Cucumber/blob/master/cucumber.png" width="80" height="80">
+
+
+## Clone the repository and make the desired code changes:
+
+```sh
+git clone https://github.com/YasinDeger48/XFleet_Cucumber.git
+```
 
 
 create Java packages:
@@ -45,3 +52,4 @@ Create Utility packages:
 - cross browser testing
 
 create resources directory same level with java directory the purpose is to hold our scenarios for the project
+
