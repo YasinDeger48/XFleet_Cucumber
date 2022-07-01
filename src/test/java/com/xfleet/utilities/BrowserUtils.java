@@ -1,5 +1,7 @@
 package com.xfleet.utilities;
 
+import com.xfleet.pages.BasePage;
+import com.xfleet.pages.HomePage;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
@@ -8,6 +10,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BrowserUtils {
+
+    static BasePage page = new BasePage();
+    static HomePage homePage = new HomePage();
 
     /**
      * Static sleep method accept second and wait during time
@@ -54,10 +59,15 @@ public class BrowserUtils {
             }
 
 
+            file.close();
+            workbook.close();
+
+
         } catch (Exception e) {
 
             e.printStackTrace();
         }
+
 
         return truckDrivers;
     }
@@ -84,7 +94,8 @@ public class BrowserUtils {
                 storeManagers.add(sheet.getRow(i).getCell(1).toString());
             }
 
-
+            file.close();
+            workbook.close();
         } catch (Exception e) {
 
             e.printStackTrace();
@@ -114,7 +125,8 @@ public class BrowserUtils {
 
                 salesManagers.add(sheet.getRow(i).getCell(2).toString());
             }
-
+            file.close();
+            workbook.close();
 
         } catch (Exception e) {
 
@@ -138,11 +150,22 @@ public class BrowserUtils {
 
             password = sheet.getRow(1).getCell(3).toString();
 
+            file.close();
+            workbook.close();
+
         } catch (Exception e) {
 
         }
         return password;
 
     }
+
+
+
+
+
+
+
+
 
 }
