@@ -24,6 +24,10 @@ public class HomePage extends BasePage{
     @FindBy(xpath = "//div[.='Invalid user name or password.']")
     public WebElement invalidPassOrUsernameAlertText;
 
+    @FindBy(xpath = "//*[contains(.,'Please fill out this field.')]")
+    public WebElement fillOutMessage;
+
+
     public void logout(){
         nameDropDown.click();
         logoutLink.click();

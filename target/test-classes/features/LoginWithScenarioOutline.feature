@@ -25,6 +25,16 @@ Feature: Login Function
 
     Examples:
 
-      | username        | password    | message                       |
+      | username        | password    | message                        |
       | user1           | Userusr123  | Invalid user name or password. |
       | salesmanager444 | UserUser123 | Invalid user name or password. |
+
+
+  @a3
+  Scenario: Login without credentials
+    When user enters credential as "user1" and "" without password
+    And user should be see "Please fill out this field." for password
+    And user enters credential as "" and "UserUser123" without username
+    Then user should be see "Please fill out this field." for username
+
+

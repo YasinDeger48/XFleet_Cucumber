@@ -4,6 +4,7 @@ import com.xfleet.pages.BasePage;
 import com.xfleet.pages.HomePage;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.WebElement;
 
 import java.io.FileInputStream;
 import java.util.ArrayList;
@@ -158,6 +159,22 @@ public class BrowserUtils {
         }
         return password;
 
+    }
+
+    public static boolean attributeCheck(WebElement element, String attribute){
+        boolean result = false;
+
+        try{
+            String att = element.getAttribute(attribute);
+            if(att != null){
+                result=true;
+            }
+
+
+        }catch (Exception e){
+
+        }
+        return result;
     }
 
 
