@@ -9,14 +9,14 @@ Feature: Login Function
   # (We have 3 types of users such as sales manager, store manager, truck driver).
   #- Driver should land on the "Quick Launchpad" page after successful login
   #- Sales Manager/ Store Manager should land on the "Dashboard" page after successful login
-  @1 @POI
+  @ac1 @POI
   Scenario: Login as Truck Driver
     When Truck Driver enters username and password, clicks the login button and should see the "Quick Launchpad"
 
-  @2 @POI
+  @ac1 @POI
   Scenario: Login as Sales Manager
     When Sales Managers enters username and password, clicks the login button and should see the "Dashboard"
 
-  @3 @POI
+  @ac1 @POI
   Scenario: Login as Store Manager
     When Store Managers enters username and password, clicks the login button and should see the "Dashboard"

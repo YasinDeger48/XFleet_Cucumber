@@ -1,4 +1,14 @@
 -------------------------------------------------------------------------------
 Test set: Login Function #1
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 113.205 s - in Login Function #1
+Tests run: 3, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 167.503 s <<< FAILURE! - in Login Function #1
+Login Function #1.Login as Sales Manager  Time elapsed: 61.849 s  <<< ERROR!
+org.openqa.selenium.ElementClickInterceptedException: 
+element click intercepted: Element <a href="/user/logout" class="no-hash">...</a> is not clickable at point (934, 132). Other element would receive the click: <a class="ui-dialog-titlebar-maximize ui-corner-all" href="#" title="maximize" role="button">...</a>
+  (Session info: chrome=103.0.5060.53)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Yasin-MacBook-Air.local', ip: 'fe80:0:0:0:1c21:9d2f:2d14:49c5%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.4', java.version: '11.0.15.1'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.24 (e47b049c438c..., userDataDir: C:\Users\ADMINI~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52822}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: a6781577e0d641fb852a4b2c1ca4abbf
+

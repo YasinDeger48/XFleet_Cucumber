@@ -10,9 +10,10 @@ import org.openqa.selenium.TakesScreenshot;
 
 public class Hooks {
 
-/*   @AfterStep
+
+/*    @AfterStep
     public void each(){
-        BrowserUtils.sleep(1);
+        BrowserUtils.sleep(2);
     }*/
 
 

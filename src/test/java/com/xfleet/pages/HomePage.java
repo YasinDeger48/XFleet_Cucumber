@@ -18,7 +18,7 @@ public class HomePage extends BasePage{
     @FindBy(xpath = "//h1[@class='oro-subtitle']")
     public WebElement dashboardText;
 
-    @FindBy(xpath = "(//h1)[2]")
+    @FindBy(xpath = "//h1[@class='oro-subtitle']")
     public WebElement headerText;
 
     @FindBy(xpath = "//div[.='Invalid user name or password.']")
@@ -26,6 +26,9 @@ public class HomePage extends BasePage{
 
     @FindBy(xpath = "//*[contains(.,'Please fill out this field.')]")
     public WebElement fillOutMessage;
+
+    @FindBy(xpath = "(//a[@class='dropdown-toggle'])[1]")
+    public WebElement namesOfUsers;
 
 
     public void logout(){

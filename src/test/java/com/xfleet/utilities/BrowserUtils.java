@@ -4,6 +4,7 @@ import com.xfleet.pages.BasePage;
 import com.xfleet.pages.HomePage;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import java.io.FileInputStream;
@@ -32,7 +33,7 @@ public class BrowserUtils {
 
 
     /**
-     * These methods using for the get usernames
+     * These methods using for get usernames
      *
      * @return
      */
@@ -177,6 +178,17 @@ public class BrowserUtils {
         return result;
     }
 
+    public static void clickLink(String linkText){
+
+        Driver.getDriver().findElement(By.xpath("//*[.='"+linkText+"']")).click();
+
+    }
+
+    public static String getText(String text){
+
+        return Driver.getDriver().findElement(By.xpath("//*[.='"+text+"']")).getText();
+
+    }
 
 
 

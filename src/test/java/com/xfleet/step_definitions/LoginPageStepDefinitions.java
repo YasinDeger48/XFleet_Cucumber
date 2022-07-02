@@ -2,6 +2,7 @@ package com.xfleet.step_definitions;
 
 import com.xfleet.pages.BasePage;
 import com.xfleet.pages.HomePage;
+import com.xfleet.pages.LoginPage;
 import com.xfleet.utilities.BrowserUtils;
 import com.xfleet.utilities.ConfigurationReader;
 import com.xfleet.utilities.Driver;
@@ -12,9 +13,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
+import java.util.Random;
 
 public class LoginPageStepDefinitions {
+    Random random = new Random();
     BasePage page = new BasePage();
+    LoginPage loginPage = new LoginPage();
     HomePage homePage = new HomePage();
     String password = BrowserUtils.password();
     WebDriverWait wait = new WebDriverWait(Driver.getDriver(),10);
@@ -33,9 +37,9 @@ public class LoginPageStepDefinitions {
 
 
 
-        for (int i = 0; i < TruckDrivers.size(); i++) {
-            page.login(TruckDrivers.get(i), password);
-            wait.until(ExpectedConditions.attributeToBe(page.loaderMasky,"class","loader-mask"));
+        for (int i = 0; i < 5; i++) {
+            loginPage.login(TruckDrivers.get(random.nextInt(BrowserUtils.truckDriversUserName().size())), password);
+            wait.until(ExpectedConditions.attributeToBe(loginPage.loaderMasky,"class","loader-mask"));
             Assert.assertTrue(homePage.quickLaunchPadText.isDisplayed() && homePage.quickLaunchPadText.getText().equals(header));
             homePage.logout();
 
@@ -48,9 +52,9 @@ public class LoginPageStepDefinitions {
     public void salesManagersEntersUsernameAndPasswordClicksTheLoginButtonAndShouldSeeThe(String header) {
 
 
-        for (int i = 0; i < salesManagers.size(); i++) {
-            page.login(salesManagers.get(i), password);
-            wait.until(ExpectedConditions.attributeToBe(page.loaderMasky,"class","loader-mask"));
+        for (int i = 0; i <5 ; i++) {
+            loginPage.login(salesManagers.get(random.nextInt(BrowserUtils.salesManagersUserName().size())), password);
+            wait.until(ExpectedConditions.attributeToBe(loginPage.loaderMasky,"class","loader-mask"));
             Assert.assertTrue(homePage.dashboardText.isDisplayed() && homePage.dashboardText.getText().contains(header));
             homePage.logout();
         }
@@ -60,9 +64,9 @@ public class LoginPageStepDefinitions {
     public void storeManagersEntersUsernameAndPasswordClicksTheLoginButtonAndShouldSeeThe(String header) {
 
 
-        for (int i = 0; i < storeManagers.size(); i++) {
-            page.login(storeManagers.get(i), password);
-            wait.until(ExpectedConditions.attributeToBe(page.loaderMasky,"class","loader-mask"));
+        for (int i = 0; i < 5; i++) {
+            loginPage.login(storeManagers.get(random.nextInt(BrowserUtils.storeManagersUserName().size())), password);
+            wait.until(ExpectedConditions.attributeToBe(loginPage.loaderMasky,"class","loader-mask"));
             Assert.assertTrue(homePage.dashboardText.isDisplayed() && homePage.dashboardText.getText().contains(header));
             homePage.logout();
         }
