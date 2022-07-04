@@ -28,7 +28,7 @@ public class Driver {
 
         if(driverPool.get()==null){
 
-            String browser = ConfigurationReader.getProperty("browser.sauce");
+            String browser = ConfigurationReader.getProperty("browser");
 
             switch (browser){
                 case "chrome":

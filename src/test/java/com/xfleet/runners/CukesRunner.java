@@ -17,7 +17,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features", //content -> features
         glue = "com/xfleet/step_definitions", //source -> step definitions
         dryRun = false,
-        tags = "",
+        tags = "@oracle",
         publish = false
 
 )
