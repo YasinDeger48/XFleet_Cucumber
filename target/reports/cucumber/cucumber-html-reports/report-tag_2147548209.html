@@ -41,7 +41,7 @@ $(document).ready(function() {
 
 
 
-<title>Cucumber Reports  - Feature: Login Function</title>
+<title>Cucumber Reports  - Tag: @a3</title>
 
 </head>
 <body>
@@ -74,7 +74,7 @@ $(document).ready(function() {
   <tbody>
     <tr class="info">
       <td>No Name (add projectName to cucumber-reporting.properties)</td>
-      <td>04 Jul 2022, 18:58</td>
+      <td>04 Jul 2022, 22:54</td>
     </tr>
   </tbody>
 </table>
@@ -87,7 +87,7 @@ $(document).ready(function() {
 
 <div id="report-lead" class="container-fluid">
   <div class="col-md-10 col-md-offset-1">
-    <h2>Feature Report</h2>
+    <h2>Tag Report</h2>
   </div>
 </div>
 
@@ -106,7 +106,7 @@ $(document).ready(function() {
     <th colspan="2">Features</th>
   </tr>
   <tr>
-    <th>Feature</th>
+    <th>Tag</th>
     <th class="passed">Passed</th>
     <th class="failed">Failed</th>
     <th class="skipped">Skipped</th>
@@ -126,20 +126,20 @@ $(document).ready(function() {
 
         <tbody>
         <tr>
-          <td class="tagname">Login Function</td>
+          <td class="tagname">@a3</td>
           <td      class="passed"    >4</td>
-          <td      class="failed"    >1</td>
           <td >0</td>
           <td >0</td>
           <td >0</td>
-          <td class="total">5</td>
+          <td >0</td>
+          <td class="total">4</td>
 
+          <td  class="passed"    >1</td>
           <td >0</td>
-          <td  class="failed"    >1</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="25263646000">25.263</td>
-          <td class="failed">Failed</td>
+          <td class="duration" data-value="242292000">0.242</td>
+          <td class="passed">Passed</td>
         </tr>
         </tbody>
 
@@ -165,39 +165,33 @@ $(document).ready(function() {
 <div class="container-fluid" id="report">
   <div class="row">
     <div class="col-md-10 col-md-offset-1">
-      <div class="feature">
+      <div class="elements">
 
-<div class="tags indention">
-</div>
-
-
-<div class="brief failed">
-  <span class="keyword indention">Feature</span>
-  <span class="name">Login Function</span>
-
-
-</div>
-
-        <div class="description indention">  User Story:
-  As a user, I should be able to log in</div>
-
-        <div class="elements inner-level">
 
 <div class="element">
+    <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_1547476254.html">Login Function</a>
+    </div>
 
 
 <div class="tags indention">
+    <b>Tags:</b>
+       <a href="report-tag_4082898728.html">@login</a>
+       <a href="report-tag_4089311534.html">@smoke</a>
+       <a href="report-tag_233058432.html">@regression</a>
+       <a href="report-tag_2147548209.html">@a3</a>
 </div>
 
 
-  <span class="lead-duration duration">4.538</span>
+  <span class="lead-duration duration">0.242</span>
 
 
   <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
 
 <div class="brief passed">
-  <span class="keyword indention">Background</span>
-  <span class="name">Users are on the login page</span>
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Login without credentials</span>
 
 
      <i class="chevron fa fa-fw"></i>
@@ -229,121 +223,11 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Given passed">
-  <span class="keyword indention">Given</span>
-  <span class="name">Users are on the login page</span>
-
-  <span class="lead-duration duration">4.538</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-  </div>
-</div>
-
-
-
-
-
-  </div>
-</div>
-
-
-<div class="element">
-
-
-<div class="tags indention">
-    <b>Tags:</b>
-       <a href="report-tag_2104282557.html">@oracle</a>
-</div>
-
-
-  <span class="lead-duration duration">20.724</span>
-
-
-  <span data-toggle="collapse" class=" collapsable-control" data-target="#element-3">
-
-<div class="brief failed">
-  <span class="keyword indention">Scenario</span>
-  <span class="name">User login xfleet site</span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </span>
-  <div class="description indention"></div>
-
-  <div id="element-3" class="collapse collapsable-details  in ">
-
-
-
-
-
-<div class="steps inner-level">
-  <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-4">
-
-<div class="brief failed">
-  <span class="keyword indention">Steps</span>
-  <span class="name"></span>
-
-
-     <i class="chevron fa fa-fw"></i>
-</div>
-
-  </div>
-
-  <div id="steps-4" class="inner-level collapse collapsable-details  in ">
-      <div class="step">
-
-
 <div class="brief step-name-When passed">
   <span class="keyword indention">When</span>
-  <span class="name">User enters username</span>
+  <span class="name">user enters credential as <span class="argument">&quot;user1&quot;</span> and <span class="argument">&quot;&quot;</span> without password</span>
 
-  <span class="lead-duration duration">7.346</span>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      </div>
-      <div class="step">
-
-
-<div class="brief step-name-And passed">
-  <span class="keyword indention">And</span>
-  <span class="name">User enters password</span>
-
-  <span class="lead-duration duration">1.685</span>
+  <span class="lead-duration duration">0.122</span>
 
 </div>
 
@@ -368,9 +252,9 @@ $(document).ready(function() {
 
 <div class="brief step-name-And passed">
   <span class="keyword indention">And</span>
-  <span class="name">User clicks login button</span>
+  <span class="name">user should be see <span class="argument">&quot;Please fill out this field.&quot;</span> for password</span>
 
-  <span class="lead-duration duration">1.284</span>
+  <span class="lead-duration duration">0.039</span>
 
 </div>
 
@@ -393,11 +277,38 @@ $(document).ready(function() {
       <div class="step">
 
 
-<div class="brief step-name-Then failed">
+<div class="brief step-name-And passed">
+  <span class="keyword indention">And</span>
+  <span class="name">user enters credential as <span class="argument">&quot;&quot;</span> and <span class="argument">&quot;UserUser123&quot;</span> without username</span>
+
+  <span class="lead-duration duration">0.050</span>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+      <div class="step">
+
+
+<div class="brief step-name-Then passed">
   <span class="keyword indention">Then</span>
-  <span class="name">User should see xfleet homepage</span>
+  <span class="name">user should be see <span class="argument">&quot;Please fill out this field.&quot;</span> for username</span>
 
-  <span class="lead-duration duration">10.409</span>
+  <span class="lead-duration duration">0.030</span>
 
 </div>
 
@@ -405,27 +316,6 @@ $(document).ready(function() {
 
 
 
-
-  <div class="inner-level">
-    <div class="message indention">
-      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-5">
-          <a>org.openqa.selenium.TimeoutException:</a>
-      </div>
-      <div id="msg-5" class="collapse collapsable-details  in ">
-        <pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for class to be &quot;loader-mask&quot;. Current class: &quot;loader-mask shown&quot; (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'Yasin-MacBook-Air.local', ip: 'fe80:0:0:0:1035:586d:99bf:e9b0%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.4', java.version: '11.0.15.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 103.0.5060.53, chrome: {chromedriverVersion: 103.0.5060.53 (a1711811edd7..., userDataDir: /var/folders/tm/nc32jg0d4nl...}, goog:chromeOptions: {debuggerAddress: localhost:51213}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: a8e1811c2b0e14a66439939fabe6a292
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at com.xfleet.step_definitions.LoginOracleStepDefinitions.user_should_see_xfleet_home_page(LoginOracleStepDefinitions.java:38)
-	at &#10045;.User should see xfleet homepage(file:///Users/values/IdeaProjects/XFleet_Cucumber/src/test/resources/features/LoginWithOracleDatabase.feature:13)
-</pre>
-      </div>
-    </div>
-  </div>
 
 
 
@@ -445,7 +335,7 @@ Session ID: a8e1811c2b0e14a66439939fabe6a292
 
 
   <div class="inner-level hooks-element-after">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-6">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-3">
 
 <div class="brief passed">
   <span class="keyword indention">Hooks</span>
@@ -457,13 +347,13 @@ Session ID: a8e1811c2b0e14a66439939fabe6a292
 
     </div>
 
-    <div id="after-6" class="inner-level collapse collapsable-details ">
+    <div id="after-3" class="inner-level collapse collapsable-details ">
         <div class="hook">
           <div class="brief passed">
             <span class="keyword indention">After</span>
               <span class="location name">com.xfleet.step_definitions.Hooks.teardown(io.cucumber.java.Scenario)</span>
 
-  <span class="lead-duration duration">0.450</span>
+  <span class="lead-duration duration">0.072</span>
 
           </div>
 
@@ -472,21 +362,6 @@ Session ID: a8e1811c2b0e14a66439939fabe6a292
 
 
 
-  <div class="embeddings inner-level">
-  <div class="embedding indention">
-    <div data-toggle="collapse" data-target="#embedding-7" class="collapsable-control">
-      <a>User login xfleet site</a>
-      <a href="embeddings/embedding_319687177.png" download target="_blank">
-        <span class="download-button glyphicon glyphicon-download-alt"></span>
-      </a>
-    </div>
-    <div id="embedding-7" class="collapse collapsable-details ">
-      <div class="embedding-content">
-        <img src="embeddings/embedding_319687177.png">
-      </div>
-    </div>
-  </div>
-  </div>
 
         </div>
     </div>
@@ -495,7 +370,6 @@ Session ID: a8e1811c2b0e14a66439939fabe6a292
   </div>
 </div>
 
-        </div>
 
       </div>
     </div>

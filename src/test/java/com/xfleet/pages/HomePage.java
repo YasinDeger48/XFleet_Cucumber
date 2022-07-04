@@ -12,6 +12,9 @@ public class HomePage extends BasePage{
     @FindBy(xpath = "//a[.='Logout']")
     public WebElement logoutLink;
 
+    @FindBy(xpath = "//a[@href='/user/logout']")
+    public WebElement logoutLink2;
+
     @FindBy(xpath = "//h1[.='Quick Launchpad']")
     public WebElement quickLaunchPadText;
 

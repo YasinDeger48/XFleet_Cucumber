@@ -17,7 +17,6 @@ import java.util.Random;
 
 public class LoginApachePOIStepDefinitions {
     Random random = new Random();
-    BasePage page = new BasePage();
     LoginPage loginPage = new LoginPage();
     HomePage homePage = new HomePage();
     String password = BrowserUtils.password();

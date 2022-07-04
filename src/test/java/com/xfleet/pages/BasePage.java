@@ -10,7 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import javax.swing.*;
 import java.util.Random;
 
-public class BasePage {
+public abstract class BasePage {
 
     Random random = new Random();
 
@@ -20,6 +20,9 @@ public class BasePage {
 
     @FindBy(css = "div[class='loader-mask shown']")
     public WebElement loaderMask;
+
+    @FindBy(xpath = "//body/div[4]")
+    public WebElement loaderMasky;
 
 
 

@@ -28,9 +28,8 @@ public class LoginPage extends BasePage{
     public WebElement loginButton;
 
 
-
-    @FindBy(xpath = "//body/div[4]")
-    public WebElement loaderMasky;
+    @FindBy(xpath = "//h2[.='Login']")
+    public WebElement loginPageText;
 
 
 

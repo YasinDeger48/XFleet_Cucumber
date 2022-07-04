@@ -5,7 +5,9 @@ com/xfleet/pages/BasePage.class
 com/xfleet/pages/HomePage.class
 com/xfleet/pages/LoginPage.class
 com/xfleet/utilities/ConfigurationReader.class
+com/xfleet/step_definitions/LogoutStepDefinitions.class
 com/xfleet/utilities/Driver.class
+com/xfleet/step_definitions/LoginApachePOIStepDefinitions.class
 com/xfleet/runners/CukesRunner.class
 com/xfleet/pages/ForgotPasswordPage.class
-com/xfleet/step_definitions/LoginPageStepDefinitions2.class
+com/xfleet/step_definitions/LoginOracleStepDefinitions.class

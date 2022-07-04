@@ -20,7 +20,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 public class LoginPageStepDefinitions {
-    BasePage basePage = new BasePage();
+
     LoginPage loginPage = new LoginPage();
     WebDriverWait wait = new WebDriverWait(Driver.getDriver(),10);
     HomePage homePage = new HomePage();
@@ -157,7 +157,6 @@ public class LoginPageStepDefinitions {
 
 
 
-
     /* AC-5 Steps*/
 
 
@@ -219,7 +218,6 @@ public class LoginPageStepDefinitions {
     public void user_sees(String string) {
 
         wait.until(ExpectedConditions.attributeToBe(loginPage.loaderMasky,"class","loader-mask"));
-        System.out.println("homePage.headerText.getText() = " + homePage.headerText.getText());
         Assert.assertTrue(homePage.headerText.getText().trim().equals(string));
 
     }
@@ -238,7 +236,7 @@ public class LoginPageStepDefinitions {
     @Then("user sees own name {string} in profile menu")
     public void user_sees_own_name_in_profile_menu(String expectedResult) {
 
-        System.out.println("actual = " + homePage.namesOfUsers.getText().trim()+" , "+ "expected = "+expectedResult);
+        //System.out.println("actual = " + homePage.namesOfUsers.getText().trim()+" , "+ "expected = "+expectedResult);
         Assert.assertEquals(expectedResult, homePage.namesOfUsers.getText().trim());
 
     }

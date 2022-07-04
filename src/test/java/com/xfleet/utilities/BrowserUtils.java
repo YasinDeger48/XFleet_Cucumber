@@ -15,7 +15,6 @@ import java.util.Random;
 
 public class BrowserUtils {
 
-    static BasePage page = new BasePage();
     static HomePage homePage = new HomePage();
 
     /**

@@ -1,3 +1,4 @@
+@login @smoke @regression
 Feature: Login Function
   User Story:
   As a user, I should be able to log in
@@ -55,7 +56,7 @@ Feature: Login Function
     ## AC-05
   @a5
   Scenario: User see the Remember Me
-    When user sees the "Remember Me" link
+    When user sees the "Remember me on this computer" link
     And user clicks on checkbox
     And user sees checkbox is checked
 
@@ -87,11 +88,11 @@ Feature: Login Function
   Scenario Outline: User can see own name in profile menu
     When user is login with "<username>" and "<password>"
     And user is on the "<pages>"
-    Then user sees own name "<username>" in profile menu
+    Then user sees own name "<showName>" in profile menu
 
     Examples:
-      | username        | password    | pages           |
-      | user5           | UserUser123 | Quick Launchpad |
-      | salesmanager140 | UserUser123 | Dashboard       |
-      | storemanager90  | UserUser123 | Dashboard       |
+      | username        | password    | pages           | showName |
+      | user5           | UserUser123 | Quick Launchpad | John Doe |
+      | salesmanager140 | UserUser123 | Dashboard       | John Doe |
+      | storemanager90  | UserUser123 | Dashboard       | John Doe |
 
