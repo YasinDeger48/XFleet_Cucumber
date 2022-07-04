@@ -1,2 +1,0 @@
-file:src/test/resources/features/LoginWithApachePOI.feature:17
-file:src/test/resources/features/LoginWithScenarioOutline.feature:57:94:95:96
