@@ -25,7 +25,6 @@ public class LoginPageStepDefinitions {
     WebDriverWait wait = new WebDriverWait(Driver.getDriver(),10);
     HomePage homePage = new HomePage();
     ForgotPasswordPage forgotPasswordPage = new ForgotPasswordPage();
-    JavascriptExecutor js = ((JavascriptExecutor) Driver.getDriver());
 
     @Given("Users are on the xfleet login page")
     public void usersAreOnTheXfleetLoginPage() {

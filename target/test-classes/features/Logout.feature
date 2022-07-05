@@ -19,17 +19,19 @@ Feature: Log out function
 
 
   @ac2x
-  Scenario: user clicks the step back button then can not go back home page
-    When user clicks the step back button
-    And user sees the "Login" page
+  Scenario: user clicks the step back button then can not go back home page after logout
+    When user clicks over name
+    And user clicks the Logout link
     And user clicks the step forward button
     Then user can not see homepage again
 
 
     @ac3x
     Scenario: user must be log out after closing the tab or tabs
-      When user closes the tabs
-      And user enters the homepage link again
+      When user switch the other tab
+      And user login on this tab
+      And user closes the all tabs
+      And user enters xfleet link again
       Then user sees the "Login" page
 
 

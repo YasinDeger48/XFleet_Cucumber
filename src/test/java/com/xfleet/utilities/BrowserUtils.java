@@ -5,6 +5,7 @@ import com.xfleet.pages.HomePage;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import java.io.FileInputStream;
@@ -12,6 +13,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.Set;
 
 public class BrowserUtils {
 
@@ -268,6 +270,23 @@ public class BrowserUtils {
 
 
         return usernames.get(random.nextInt(usernames.size()));
+    }
+
+
+
+
+    public static void windowHandle(WebDriver driver, String siteURL) {
+
+        Set<String> windowHandles = driver.getWindowHandles();
+
+        for (String each : windowHandles) {
+            driver.switchTo().window(each);
+            System.out.println(each);
+
+            if (driver.getTitle().equals(siteURL)) {
+                break;
+            }
+        }
     }
 
 

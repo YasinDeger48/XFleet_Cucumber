@@ -9,13 +9,17 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.Set;
 
 public class LogoutStepDefinitions {
     HomePage homePage = new HomePage();
     LoginPage loginPage = new LoginPage();
     WebDriverWait wait = new WebDriverWait(Driver.getDriver(),10);
+    JavascriptExecutor js = ((JavascriptExecutor) Driver.getDriver());
 
     @Given("user is on login page")
     public void user_is_on_login_page() {
@@ -75,8 +79,7 @@ public class LogoutStepDefinitions {
     @Then("user can not see homepage again")
     public void user_can_not_see_homepage_again() {
 
-        Assert.assertTrue(loginPage.loginPageText.getText().equals("Login") &&
-                !homePage.dashboardText.isDisplayed());
+        Assert.assertTrue(loginPage.loginPageText.getText().equals("Login"));
 
 
     }
@@ -85,20 +88,23 @@ public class LogoutStepDefinitions {
 //ac3
 
 
-    @When("user closes the tabs")
-    public void user_closes_the_tabs() {
+    @When("user switch the other tab")
+    public void user_switch_the_other_tab() {
 
 
 
     }
-    @When("user enters the homepage link again")
-    public void user_enters_the_homepage_link_again() {
+    @When("user login on this tab")
+    public void user_login_on_this_tab() {
 
-        Driver.getDriver().get(ConfigurationReader.getProperty("web.site"));
-        wait.until(ExpectedConditions.attributeToBe(loginPage.loaderMasky,"class","loader-mask"));
-        Assert.assertTrue(homePage.headerText.isDisplayed());
+
 
     }
+    @When("user enters xfleet link again")
+    public void user_enters_xfleet_link_again() {
 
+
+
+    }
 
 }
