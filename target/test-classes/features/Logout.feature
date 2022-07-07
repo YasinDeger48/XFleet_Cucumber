@@ -9,7 +9,7 @@ Feature: Log out function
     And user is on the home page
 
 
-@ac1x
+  @FLTAPS-1869  @logout  @TC009
   Scenario: user can log out successfully
     When user clicks over name
     And user sees the logout "Logout" link
@@ -18,7 +18,7 @@ Feature: Log out function
 
 
 
-  @ac2x
+  @FLTAPS-1870  @logout  @TC010
   Scenario: user clicks the step back button then can not go back home page after logout
     When user clicks over name
     And user clicks the Logout link
@@ -26,13 +26,12 @@ Feature: Log out function
     Then user can not see homepage again
 
 
-    @ac3x
+    @FLTAPS-1871  @logout  @TC011
     Scenario: user must be log out after closing the tab or tabs
-      When user switch the other tab
-      And user login on this tab
-      And user closes the all tabs
-      And user enters xfleet link again
-      Then user sees the "Login" page
+      When user close the all xfleet site tabs
+      And user enter xfleet site
+      And user can see the "Quick Launchpad" site
+      Then user is logout the xfleet site
 
 
 

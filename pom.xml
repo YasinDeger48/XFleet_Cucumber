@@ -69,6 +69,13 @@
             <version>21.1.0.0</version>
         </dependency>
 
+        <!--pico container-->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-picocontainer</artifactId>
+            <version>6.9.1</version>
+        </dependency>
+
 
 
     </dependencies>

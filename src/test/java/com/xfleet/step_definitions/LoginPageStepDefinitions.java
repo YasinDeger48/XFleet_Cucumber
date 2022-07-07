@@ -235,7 +235,6 @@ public class LoginPageStepDefinitions {
     @Then("user sees own name {string} in profile menu")
     public void user_sees_own_name_in_profile_menu(String expectedResult) {
 
-        //System.out.println("actual = " + homePage.namesOfUsers.getText().trim()+" , "+ "expected = "+expectedResult);
         Assert.assertEquals(expectedResult, homePage.namesOfUsers.getText().trim());
 
     }

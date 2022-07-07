@@ -8,7 +8,7 @@ Feature: Login Function
 
     ## AC-01
 
-  @a1
+  @FLTAPS-1859  @login  @aTC001
   Scenario Outline: Login as users
     When user is login as a "<users>"
     Then user is on the "<pages>"
@@ -22,7 +22,7 @@ Feature: Login Function
 
     ## AC-02
 
-  @a2
+  @FLTAPS-1860  @login @aTC002
   Scenario Outline: Login with invalid credentials
     When user enters valid "<username>" and invalid "<password>"
     And user should be see "<message>"
@@ -38,7 +38,7 @@ Feature: Login Function
 
     ## AC-03
 
-  @a3
+  @FLTAPS-1861  @login  @aTC003
   Scenario: Login without credentials
     When user enters credential as "user1" and "" without password
     And user should be see "Please fill out this field." for password
@@ -47,14 +47,14 @@ Feature: Login Function
 
 
     ## AC-04
-  @a4
+  @FLTAPS-1862  @login  @aTC004
   Scenario: User land on Forgot Password Page
     When user sees the "Forgot your password?" link
     And user can click the "Forgot your password?" link
     And user should be see "Forgot Password" page
 
     ## AC-05
-  @a5
+  @FLTAPS-1863  @login  @aTC005
   Scenario: User see the Remember Me
     When user sees the "Remember me on this computer" link
     And user clicks on checkbox
@@ -62,14 +62,14 @@ Feature: Login Function
 
 
     ## AC-06
-  @a6
+  @FLTAPS-1864  @login  @aTC006
   Scenario: User sees in password box
     When user enters "password" in password box
     Then user sees the password as password sign
 
 
 ## AC-07
-  @a7
+  @FLTAPS-1865  @login   @aTC007
   Scenario Outline: User login with enter key
     When user enters username "<username>"
     And user enters password "<password>"
@@ -84,7 +84,7 @@ Feature: Login Function
 
 
 ## AC-08
-  @a8
+  @FLTAPS-1866  @login  @aTC008
   Scenario Outline: User can see own name in profile menu
     When user is login with "<username>" and "<password>"
     And user is on the "<pages>"

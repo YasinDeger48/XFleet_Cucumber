@@ -1,33 +1,43 @@
 package com.xfleet.step_definitions;
 
+import com.xfleet.cucumber.TestUtil;
+import com.xfleet.pages.LoginPage;
 import com.xfleet.utilities.BrowserUtils;
+import com.xfleet.utilities.ConfigurationReader;
 import com.xfleet.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.AfterStep;
 import io.cucumber.java.Scenario;
+import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
 import java.sql.SQLException;
+import java.util.concurrent.TimeUnit;
 
-public class Hooks {
-
-
-/*    @AfterStep
-    public void each(){
-        BrowserUtils.sleep(2);
-    }*/
+public class Hooks extends TestUtil {
 
 
-    @Test
-    public void testCase() throws SQLException {
+    private TestUtil base;
 
-        System.out.println(BrowserUtils.getUserNameWithOracle());
-        System.out.println(BrowserUtils.getPasswordWithOracle());
-
-
+    public Hooks(TestUtil base) {
+        this.base = base;
     }
+
+
+    @Before
+    public void InitializeTest(){
+
+        System.out.println("openinig the browser");
+
+        //passing a dummy webdriver instance
+
+        base.stepInfo = "FirefoxDriver";
+    }
+
+
+
 
 
 
@@ -44,7 +54,12 @@ public class Hooks {
 
         }
 
-        Driver.closeDriver();
+        try{
+            Driver.closeDriver();
+        }catch (Exception e){
+
+        }
+
 
 
     }

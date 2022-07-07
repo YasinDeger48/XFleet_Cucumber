@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: Login Function #3
 -------------------------------------------------------------------------------
-Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 91.088 s - in Login Function #3
+Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 81.929 s - in Login Function #3
